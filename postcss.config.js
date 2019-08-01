@@ -6,12 +6,12 @@ const { join } = require('path');
 module.exports = {
   plugins: [
     tailwind(join(__dirname, './tailwind.config.js')),
-    cssnano({
-      preset: 'default',
-    }),
-    ...(process.env.NODE_ENV === 'production'
-      ? [purgecss(require(join(__dirname, './purgecss.config')))]
-      : []),
+    // cssnano({
+    //   preset: 'default',
+    // }),
+    // ...(process.env.NODE_ENV === 'production'
+    //   ? [purgecss(require(join(__dirname, './purgecss.config')))]
+    //   : []),
     require('autoprefixer'),
   ],
 };
