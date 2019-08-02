@@ -81,6 +81,10 @@
   </header>
 </template>
 
+<style lang="postcss" scoped>
+</style>
+
+
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
