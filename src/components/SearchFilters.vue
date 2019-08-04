@@ -38,82 +38,85 @@
       </button>
     </div>
     <form>
-      <fieldset>
-        <div>
-          <label>
-            <span>Bedrooms</span>
-            <select>
+      <fieldset class="px-4 py-4 border-t border-gray-900">
+        <div class="flex -mx-2">
+          <label class="block w-1/2 px-2">
+            <span class="text-sm font-semibold text-gray-500">Bedrooms</span>
+            <select class="mt-1 form-select block w-full">
               <option value="4">4</option>
             </select>
           </label>
-          <label>
-            <span>Bathrooms</span>
-            <select>
+          <label class="block w-1/2 px-2">
+            <span class="text-sm font-semibold text-gray-500">Bathrooms</span>
+            <select class="mt-1 form-select block w-full">
               <option value="2">2</option>
             </select>
           </label>
         </div>
-        <div>
+        <div class="mt-4">
           <label>
-            <span>Price Range</span>
-            <select>
+            <span class="text-sm font-semibold text-gray-500">Price Range</span>
+            <select class="mt-1 form-select block w-full">
               <option value>Up to $2,000/wk</option>
             </select>
           </label>
         </div>
       </fieldset>
-      <fieldset>
-        <legend>Property Type</legend>
-        <label>
-          <input type="radio" name="propertyType" value="house" />
-          House
+      <fieldset class="px-4 py-4 border-t border-gray-900">
+        <span class="block text-sm font-semibold text-gray-500">Property Type</span>
+        <label class="mt-3 flex items-center">
+          <input class="form-radio" type="radio" name="propertyType" value="house" />
+          <span class="ml-2 text-white">House</span>
         </label>
-        <label>
-          <input type="radio" name="propertyType" value="apartment" />
-          Apartment
+        <label class="mt-3 flex items-center">
+          <input class="form-radio" type="radio" name="propertyType" value="apartment" />
+          <span class="ml-2 text-white">Apartment</span>
         </label>
-        <label>
-          <input type="radio" name="propertyType" value="loft" />
-          Loft
+        <label class="mt-3 flex items-center">
+          <input class="form-radio" type="radio" name="propertyType" value="loft" />
+          <span class="ml-2 text-white">Loft</span>
         </label>
-        <label>
-          <input type="radio" name="propertyType" value="townhouse" />
-          Townhouse
-        </label>
-      </fieldset>
-      <fieldset>
-        <legend>Amenities</legend>
-        <label>
-          <input type="checkbox" name="house" />
-          Balcony
-        </label>
-        <label>
-          <input type="checkbox" name="airConditioning" />
-          Air Conditioning
-        </label>
-        <label>
-          <input type="checkbox" name="pool" />
-          Pool
-        </label>
-        <label>
-          <input type="checkbox" name="beach" />
-          Beach
-        </label>
-        <label>
-          <input type="checkbox" name="petFriendly" />
-          Pet Friendly
-        </label>
-        <label>
-          <input type="checkbox" name="kidFriendly" />
-          Kid Friendly
-        </label>
-        <label>
-          <input type="checkbox" name="parking" />
-          Parking
+        <label class="mt-3 flex items-center">
+          <input class="form-radio" type="radio" name="propertyType" value="townhouse" />
+          <span class="ml-2 text-white">Townhouse</span>
         </label>
       </fieldset>
-      <div>
-        <button type="button">Update Results</button>
+      <fieldset class="px-4 py-4 border-t border-gray-900">
+        <span class="block text-sm font-semibold text-gray-500"></span>
+        <label class="mt-3 flex items-center">
+          <input class="form-checkbox" type="checkbox" name="house" />
+          <span class="ml-2 text-white">Balcony</span>
+        </label>
+        <label class="mt-3 flex items-center">
+          <input class="form-checkbox" type="checkbox" name="airConditioning" />
+          <span class="ml-2 text-white">Air Conditioning</span>
+        </label>
+        <label class="mt-3 flex items-center">
+          <input class="form-checkbox" type="checkbox" name="pool" />
+          <span class="ml-2 text-white">Pool</span>
+        </label>
+        <label class="mt-3 flex items-center">
+          <input class="form-checkbox" type="checkbox" name="beach" />
+          <span class="ml-2 text-white">Beach</span>
+        </label>
+        <label class="mt-3 flex items-center">
+          <input class="form-checkbox" type="checkbox" name="petFriendly" />
+          <span class="ml-2 text-white">Pet Friendly</span>
+        </label>
+        <label class="mt-3 flex items-center">
+          <input class="form-checkbox" type="checkbox" name="kidFriendly" />
+          <span class="ml-2 text-white">Kid Friendly</span>
+        </label>
+        <label class="mt-3 flex items-center">
+          <input class="form-checkbox" type="checkbox" name="parking" />
+          <span class="ml-2 text-white">Parking</span>
+        </label>
+      </fieldset>
+      <div class="bg-gray-900 px-4 py-4">
+        <button
+          type="button"
+          class="bg-indigo-500 hover:bg-indigo-400 font-semibold text-white px-4 py-2 rounded-lg w-full"
+        >Update Results</button>
       </div>
     </form>
   </section>

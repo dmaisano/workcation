@@ -3,6 +3,73 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    customForms: (theme) => ({
+      default: {
+        input: {
+          borderRadius: theme('borderRadius.lg'),
+          backgroundColor: theme('colors.gray.200'),
+          '&:focus': {
+            backgroundColor: theme('colors.white'),
+          },
+        },
+        select: {
+          backgroundColor: theme('colors.gray.700'),
+          borderColor: 'transparent',
+          borderRadius: theme('borderRadius.lg'),
+          boxShadow: theme('boxShadow.default'),
+          color: theme('colors.white'),
+          icon: `<svg fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>`,
+          lineHeight: theme('lineHeight.snug'),
+
+          '&:focus': {
+            backgroundColor: theme('colors.gray.600'),
+            borderColor: 'transparent',
+            focusShadow: 'none',
+            boxShadow: 'none',
+          },
+        },
+        checkbox: {
+          width: '1.5em',
+          height: '1.5em',
+          backgroundColor: theme('colors.gray.900'),
+          borderColor: 'transparent',
+          borderRadius: theme('borderRadius.default'),
+          color: theme('colors.indigo.500'),
+
+          '&:hover': {
+            backgroundColor: theme('colors.gray.600'),
+          },
+
+          '&:focus': {
+            backgroundColor: theme('colors.gray.600'),
+            borderColor: 'transparent',
+            focusShadow: 'none',
+            boxShadow: 'none',
+          },
+
+          '&:active': {
+            backgroundColor: theme('colors.indigo.500'),
+          },
+        },
+        radio: {
+          width: '1.5em',
+          height: '1.5em',
+          icon:
+            '<svg fill="#fff" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>',
+          backgroundColor: theme('colors.gray.900'),
+          borderColor: 'transparent',
+          color: theme('colors.indigo.500'),
+
+          '&:focus': {
+            backgroundColor: theme('colors.indigo.500'),
+            borderColor: 'transparent',
+            focusShadow: 'none',
+            boxShadow: 'none',
+          },
+        },
+      },
+    }),
+
     screens: {
       sm: '640px',
       md: '768px',
