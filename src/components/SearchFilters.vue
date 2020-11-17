@@ -38,8 +38,8 @@
       </button>
     </div>
     <form v-show="isOpen">
-      <fieldset class="px-4 py-4 border-t border-gray-900">
-        <div class="flex -mx-2">
+      <div class="px-4 py-4 border-t border-gray-900 sm:flex sm:-mx-2">
+        <div class="flex -mx-2 sm:w-1/2 sm:mx-0">
           <label class="block w-1/2 px-2">
             <span class="text-sm font-semibold text-gray-500">Bedrooms</span>
             <select
@@ -57,7 +57,7 @@
             </select>
           </label>
         </div>
-        <div class="mt-4">
+        <div class="mt-4 sm:w-1/2 sm:mt-0 sm:px-2">
           <label>
             <span class="text-sm font-semibold text-gray-500">Price Range</span>
             <select
@@ -67,8 +67,8 @@
             </select>
           </label>
         </div>
-      </fieldset>
-      <fieldset class="px-4 py-4 border-t border-gray-900">
+      </div>
+      <div class="px-4 py-4 border-t border-gray-900">
         <span class="block text-sm font-semibold text-gray-500"
           >Property Type</span
         >
@@ -108,8 +108,8 @@
           />
           <span class="ml-2 text-white">Townhouse</span>
         </label>
-      </fieldset>
-      <fieldset class="px-4 py-4 border-t border-gray-900">
+      </div>
+      <div class="px-4 py-4 border-t border-gray-900">
         <span class="block text-sm font-semibold text-gray-500">Amenities</span>
         <label class="mt-3 flex items-center">
           <input
@@ -167,7 +167,7 @@
           />
           <span class="ml-2 text-white">Parking</span>
         </label>
-      </fieldset>
+      </div>
       <div class="bg-gray-900 px-4 py-4">
         <button
           class="block w-full bg-indigo-500 hover:bg-indigo-400 font-semibold text-white px-4 py-2 rounded-lg"
