@@ -1,10 +1,12 @@
-const Header = ({ toggle, isOpen }) => {
+import Dropdown from "./Dropdown";
+
+const Header = ({ setState, state, toggle }) => {
   return (
-    <header class="bg-gray-900 sm:flex sm:items-center sm:justify-between xl:bg-white">
-      <div class="flex justify-between px-4 py-3 xl:w-72 xl:bg-gray-900 xl:justify-center xl:py-5">
+    <header className="bg-gray-900 sm:flex sm:items-center sm:justify-between xl:bg-white">
+      <div className="flex justify-between px-4 py-3 xl:w-72 xl:bg-gray-900 xl:justify-center xl:py-5">
         <div>
           <svg
-            class="h-8 w-auto"
+            className="h-8 w-auto"
             viewBox="0 0 185 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -18,33 +20,33 @@ const Header = ({ toggle, isOpen }) => {
               fill="#fff"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M43.911 12.604L36.213 8.16v20.645h9v2h-44v-2h4v-12.72l-3.728.933L1 15.078l21.09-5.273h3.122a9.552 9.552 0 0 0-.68 2.559l-.483 3.975 5.164-2.982v15.448h5V8.161l-7.696 4.444a7.502 7.502 0 0 1 2.565-4.8h-4.12a7.489 7.489 0 0 1 6.646-2.973l-5.591-3.228a7.488 7.488 0 0 1 6.696.402c1.039.6 1.88 1.41 2.5 2.347a7.461 7.461 0 0 1 2.5-2.347 7.49 7.49 0 0 1 6.698-.402l-5.593 3.228a7.488 7.488 0 0 1 6.646 2.973h-4.12a7.498 7.498 0 0 1 2.567 4.8zM25.213 28.805v-10h-6v10h6zm-11-8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"
               fill="#A3BFFA"
             />
           </svg>
         </div>
-        <div class="flex sm:hidden">
+        <div className="flex sm:hidden">
           <button
             onClick={() => toggle()}
             type="button"
-            class="px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
+            className="px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
           >
             <svg
-              class="h-6 w-6 fill-current"
+              className="h-6 w-6 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
-              {isOpen ? (
+              {state.isOpen ? (
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
                 />
               ) : (
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
                 />
               )}
@@ -53,14 +55,14 @@ const Header = ({ toggle, isOpen }) => {
         </div>
       </div>
       <nav
-        class={`sm:flex sm:items-center sm:px-4 xl:flex-1 xl:justify-between ${
-          isOpen ? `block` : `hidden`
+        className={`sm:flex sm:items-center sm:px-4 xl:flex-1 xl:justify-between ${
+          state.isOpen ? `block` : `hidden`
         }`}
       >
-        <div class="hidden xl:block xl:relative xl:max-w-xs xl:w-full">
-          <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+        <div className="hidden xl:block xl:relative xl:max-w-xs xl:w-full">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3">
             <svg
-              class="h-6 w-6 fill-current text-gray-600"
+              className="h-6 w-6 fill-current text-gray-600"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -69,45 +71,46 @@ const Header = ({ toggle, isOpen }) => {
             </svg>
           </div>
           <input
-            class="block w-full border border-transparent bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-300 text-gray-900 rounded-lg pl-10 pr-4 py-2"
+            className="block w-full border border-transparent bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-300 text-gray-900 rounded-lg pl-10 pr-4 py-2"
             placeholder="Search by keywords"
           />
         </div>
-        <div class="sm:flex sm:items-center">
-          <div class="px-2 pt-2 pb-5 border-b border-gray-800 sm:flex sm:border-b-0 sm:py-0 sm:px-0">
-            <button class="block px-3 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:text-sm sm:px-2 xl:text-gray-900 xl:hover:bg-gray-200">
+        <div className="sm:flex sm:items-center">
+          <div className="px-2 pt-2 pb-5 border-b border-gray-800 sm:flex sm:border-b-0 sm:py-0 sm:px-0">
+            <button className="block px-3 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:text-sm sm:px-2 xl:text-gray-900 xl:hover:bg-gray-200">
               List your property
             </button>
-            <button class="mt-1 block px-3 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:mt-0 sm:text-sm sm:px-2 sm:ml-2 xl:text-gray-900 xl:hover:bg-gray-200">
+            <button className="mt-1 block px-3 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:mt-0 sm:text-sm sm:px-2 sm:ml-2 xl:text-gray-900 xl:hover:bg-gray-200">
               Trips
             </button>
-            <button class="mt-1 block px-3 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:mt-0 sm:text-sm sm:px-2 sm:ml-2 xl:text-gray-900 xl:hover:bg-gray-200">
+            <button className="mt-1 block px-3 py-1 rounded font-semibold text-white hover:bg-gray-800 sm:mt-0 sm:text-sm sm:px-2 sm:ml-2 xl:text-gray-900 xl:hover:bg-gray-200">
               Messages
             </button>
           </div>
-          <div class="relative px-5 py-5 sm:py-0 sm:ml-4 sm:px-0">
-            <div class="flex items-center sm:hidden">
+          <div className="relative px-5 py-5 sm:py-0 sm:ml-4 sm:px-0">
+            <div className="flex items-center sm:hidden">
               <img
-                class="h-10 w-10 object-cover rounded-full border-2 border-gray-600"
+                className="h-10 w-10 object-cover rounded-full border-2 border-gray-600"
                 src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80"
                 alt=""
               />
-              <span class="ml-4 font-semibold text-gray-200 sm:hidden">
+              <span className="ml-4 font-semibold text-gray-200 sm:hidden">
                 Isla Schoger
               </span>
             </div>
-            <div class="mt-5 sm:hidden">
-              <button class="block text-gray-400 hover:text-white">
+            <div className="mt-5 sm:hidden">
+              <button className="block text-gray-400 hover:text-white">
                 Account settings
               </button>
-              <button class="mt-3 block text-gray-400 hover:text-white">
+              <button className="mt-3 block text-gray-400 hover:text-white">
                 Support
               </button>
-              <button class="mt-3 block text-gray-400 hover:text-white">
+              <button className="mt-3 block text-gray-400 hover:text-white">
                 Sign out
               </button>
             </div>
-            {/* DROPDOWN GOES HERE */}
+
+            <Dropdown {...{ setState, state, toggle }} />
           </div>
         </div>
       </nav>
