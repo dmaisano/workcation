@@ -1,4 +1,13 @@
 {
-  "cSpell.words": ["browserslist", "craco", "tailwindcss"],
-  "cSpell.ignoreWords": ["compat"]
+  "cSpell.words": [],
+  "cSpell.ignoreWords": [
+    "Isla",
+    "Schoger",
+    "Workcation",
+    "browserslist",
+    "compat",
+    "craco",
+    "semibold",
+    "tailwindcss"
+  ]
 }
