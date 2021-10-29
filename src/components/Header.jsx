@@ -99,13 +99,13 @@ const Header = ({ setState, state, toggle }) => {
               </span>
             </div>
             <div className="mt-5 sm:hidden">
-              <button className="block text-gray-400 hover:text-white">
+              <button className="block text-gray-500 hover:text-white">
                 Account settings
               </button>
-              <button className="mt-3 block text-gray-400 hover:text-white">
+              <button className="mt-3 block text-gray-500 hover:text-white">
                 Support
               </button>
-              <button className="mt-3 block text-gray-400 hover:text-white">
+              <button className="mt-3 block text-gray-500 hover:text-white">
                 Sign out
               </button>
             </div>
