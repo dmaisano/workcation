@@ -1,4 +1,4 @@
-const SearchFilter = ({ setState, state, toggle }) => {
+const SearchFilter = ({ state, toggle }) => {
   return (
     <section className="bg-gray-800 xl:w-72">
       <div className="flex justify-between px-4 py-3 xl:hidden">
