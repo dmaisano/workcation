@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@import "form.css";
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
